@@ -18,31 +18,31 @@
 #   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #
 
-#from . import action_database
-#from . import action_deptest
-#from . import action_query
-#from . import action_remove
-#from . import action_sync
-#from . import action_upgrade
-#from . import action_version
-#
-#ACTIONS = {
-#	'db': action_database.main,
-#	'deptest': action_deptest.main,
-#	'query': action_query.main,
-#	'remove': action_remove.main,
-#	'sync': action_sync.main,
-#	'upgrade': action_upgrade.main,
-#	'version': action_version.main
-#}
-#
-#def run_action_with_args(action, args):
-#	if action not in ACTIONS:
-#		print("Invalid action specified (%s are supported)" % ', '.join(ACTIONS.keys()))
-#		return 1
-#	else:
-#		callback = ACTIONS[action]
-#		return callback(args)
+from . import action_database
+from . import action_deptest
+from . import action_query
+from . import action_remove
+from . import action_sync
+from . import action_upgrade
+from . import action_version
+
+ACTIONS = {
+	'db': action_database.main,
+	'deptest': action_deptest.main,
+	'query': action_query.main,
+	'remove': action_remove.main,
+	'sync': action_sync.main,
+	'upgrade': action_upgrade.main,
+	'version': action_version.main
+}
+
+def run_action_with_args(action, args):
+	if action not in ACTIONS:
+		print("Invalid action specified (%s are supported)" % ', '.join(ACTIONS.keys()))
+		return 1
+	else:
+		callback = ACTIONS[action]
+		return callback(args)
 
 # vim: set ts=4 sw=4 tw=0 noet:
 

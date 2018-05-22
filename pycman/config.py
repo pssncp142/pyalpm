@@ -33,7 +33,7 @@ import argparse
 import collections
 import warnings
 
-import pyakm.pyalpm as pyalpm
+import pyalpm
 
 class InvalidSyntax(Warning):
 	def __init__(self, filename, problem, arg):
